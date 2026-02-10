@@ -18,7 +18,7 @@ function escribir() {
 escribir();
 
 // contador simple
-const inicio = new Date("2024-02-14");
+const inicio = new Date("2023-10-28");
 setInterval(() => {
   const ahora = new Date();
   const diff = ahora - inicio;
@@ -32,11 +32,11 @@ btnSorpresa.onclick = () => {
 };
 
 btnSi.onclick = () => {
-  mensajeFinal.innerHTML = "Te amo hoy y siempre 💖";
+  mensajeFinal.innerHTML = "Gracias mi amor, Te amo hoy y siempre 💖";
 };
 
 btnNo.onclick = () => {
-  mensajeFinal.innerHTML = "Esto me pone triste, pero seguiré luchando por ser tu San Valentín ❤️";
+  mensajeFinal.innerHTML = "Esto me pone triste, pero seguiré luchando por ser tu San Valentín lo prometo ❤️";
 };
 // 🌸 Pétalos de corazón cayendo del árbol
 const arbol = document.querySelector(".arbol");
@@ -57,4 +57,5 @@ function soltarPetalo() {
 }
 
 // cada 700ms cae un corazón
+
 setInterval(soltarPetalo, 700);

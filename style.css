@@ -1,0 +1,149 @@
+/* RESET BÁSICO */
+* {
+  box-sizing: border-box;
+}
+
+/* 🌄 FONDO */
+body {
+  margin: 0;
+  height: 100vh;
+  font-family: Georgia, serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("fondo.jpg") center/cover no-repeat;
+  overflow: hidden;
+}
+
+/* 📦 CONTENEDOR */
+.contenedor {
+  background: rgba(255, 255, 255, 0.65);
+  padding: 22px;
+  border-radius: 25px;
+  text-align: center;
+  max-width: 320px;
+  width: 90%;
+}
+
+/* 🌳 ÁRBOL */
+.arbol {
+  position: relative;
+  width: 220px;
+  height: 260px;
+  margin: 0 auto 10px;
+}
+
+/* 🌳 TRONCO */
+.arbol::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 30px;
+  height: 90px;
+  background: #7a4a2e;
+  border-radius: 10px;
+  transform: translateX(-50%);
+}
+
+/* ❤️ CORAZÓN PRINCIPAL */
+.corazon {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  width: 120px;
+  height: 110px;
+  background: #e63946;
+  transform: translateX(-50%) rotate(-45deg);
+  animation: latido 1.6s infinite;
+}
+
+.corazon::before,
+.corazon::after {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 110px;
+  background: #e63946;
+  border-radius: 50%;
+}
+
+.corazon::before {
+  top: -60px;
+  left: 0;
+}
+
+.corazon::after {
+  left: 60px;
+  top: 0;
+}
+
+/* 💓 LATIDO */
+@keyframes latido {
+  0%, 100% {
+    transform: translateX(-50%) rotate(-45deg) scale(1);
+  }
+  50% {
+    transform: translateX(-50%) rotate(-45deg) scale(1.08);
+  }
+}
+
+/* ✍️ TEXTO */
+.texto {
+  margin-top: 10px;
+  color: #4a1c40;
+}
+
+#contador {
+  font-size: 0.85rem;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* 🔘 BOTONES */
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  background: crimson;
+  color: white;
+  margin-top: 15px;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+#btnNo {
+  background: #999;
+}
+
+/* 🙈 OCULTO */
+.oculto {
+  display: none;
+}
+
+/* 💌 MENSAJE FINAL */
+#mensajeFinal {
+  margin-top: 20px;
+  color: #4a1c40;
+}
+
+/* 🌸 PÉTALOS (CORAZONES QUE CAEN) */
+.petalo {
+  position: absolute;
+  top: 0;
+  font-size: 16px;
+  animation: caer 5s linear forwards;
+  pointer-events: none;
+  opacity: 0.9;
+}
+
+@keyframes caer {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(300px) rotate(360deg);
+    opacity: 0;
+  }
+}

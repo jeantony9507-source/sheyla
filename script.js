@@ -4,7 +4,7 @@ document.body.onclick = () => {
 };
 
 // texto
-const texto = "Sheyla, eres el lugar donde siempre quiero estar ❤️";
+const texto = "Mi amor, eres el lugar donde siempre quiero estar ❤️";
 let i = 0;
 const dedicatoria = document.getElementById("dedicatoria");
 
@@ -59,3 +59,4 @@ function soltarPetalo() {
 // cada 700ms cae un corazón
 
 setInterval(soltarPetalo, 700);
+
